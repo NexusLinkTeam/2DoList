@@ -5,11 +5,22 @@ android {
     buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.jacob.www.a2dolist"
-        minSdkVersion 14
+        minSdkVersion 17
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        applicationId "com.jacob.www.a2dolist"
+        ndk {
+            //??????????cpu?????.so??
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a'
+            // ????????? 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "c91b0418d8554d5bc9b32f74", //JPush??????????????appkey.
+                JPUSH_CHANNEL : "developer-default", //?????§Õ????????.
+        ]
     }
     buildTypes {
         release {
@@ -28,4 +39,13 @@ dependencies {
     compile 'com.android.support:design:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    compile 'cn.jiguang.sdk:jmessage:2.2.0'
+    // ?????JMessage 2.2.0 ?·Ú?????
+    compile 'cn.jiguang.sdk:jcore:1.1.3'
+    compile 'com.jakewharton:butterknife:5.1.2'
+    compile 'io.reactivex:rxjava:x.y.z'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
 }
