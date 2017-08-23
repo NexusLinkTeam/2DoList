@@ -24,6 +24,22 @@ public class SharePreferenceManager {
         }
         return null;
     }
+
+    private static final String KEY_CACHED_NICKNAME = "2dolist_cached_nickname";
+
+    public static void setCachedNickname(String nickname) {
+        if (null != sp) {
+            sp.edit().putString(KEY_CACHED_NICKNAME, nickname).apply();
+        }
+    }
+
+    public static String getCachedNickname() {
+        if (null != sp) {
+            return sp.getString(KEY_CACHED_NICKNAME, null);
+        }
+        return null;
+    }
+
     private static final String KEY_CACHED_AVATAR_PATH = "2dolist_cached_avatar_path";
 
     public static void setCachedAvatarPath(String path) {
@@ -38,7 +54,7 @@ public class SharePreferenceManager {
         }
         return null;
     }
-    private static final String KEY_REGISTER_AVATAR_PATH = "2dolist_register_avatar_path";
+
 
 
 }

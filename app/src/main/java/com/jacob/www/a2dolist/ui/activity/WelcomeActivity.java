@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.jacob.www.a2dolist.BaseApp;
 import com.jacob.www.a2dolist.MainActivity;
 import com.jacob.www.a2dolist.R;
 
@@ -20,6 +21,7 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+        BaseApp.registerOrLogin =1;
         initData();
     }
     private void  initData(){

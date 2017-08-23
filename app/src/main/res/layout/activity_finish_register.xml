@@ -47,6 +47,12 @@
             <!--android:layout_gravity="center_vertical"-->
             <!--android:background="@drawable/user_normal"-->
             <!--android:scaleType="centerCrop"/>-->
+        <com.jacob.www.a2dolist.util.CircleImageView
+            android:id="@+id/upload_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/upload_photo"/>
 
     </RelativeLayout>
 

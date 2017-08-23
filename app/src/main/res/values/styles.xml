@@ -23,6 +23,11 @@
     <style name="LogInStyle" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>
     </style>
+    <style name="PhotoChooseStyle" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/jmui_jpush_blue</item>
+        <item name="colorPrimaryDark">@color/jmui_jpush_blue</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
     <style name="FinishRegisterStyle" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>
     </style>

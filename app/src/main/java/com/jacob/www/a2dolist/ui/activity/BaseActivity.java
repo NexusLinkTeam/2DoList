@@ -3,6 +3,8 @@ package com.jacob.www.a2dolist.ui.activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -41,12 +43,15 @@ public class BaseActivity extends AppCompatActivity {
     protected int mAvatarSize;
     protected float mRatio;
     private Dialog dialog;
-
+    ConnectivityManager manager ;
+    NetworkInfo networkInfo ;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
 //        JMessageClient.registerEventReceiver(this);
+        manager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+        networkInfo = manager.getActiveNetworkInfo();
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         mDensity = dm.density;
@@ -55,6 +60,13 @@ public class BaseActivity extends AppCompatActivity {
         mHeight = dm.heightPixels;
         mRatio = Math.min((float) mWidth / 720, (float) mHeight / 1280);
         mAvatarSize = (int) (50 * mDensity);
+    }
+    protected boolean isNetWork(){
+        if(networkInfo!=null&&networkInfo.isAvailable()){
+            return true;
+        }else {
+            return false;
+        }
     }
     //初始化各个activity的title
     public void initTitle(boolean returnBtn, boolean titleLeftDesc, String titleLeft, String title, boolean save, String desc) {
