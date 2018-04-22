@@ -10,38 +10,22 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
-import android.view.View;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.jacob.www.a2dolist.R;
-import com.jacob.www.a2dolist.util.SharePreferenceManager;
-
-import java.io.File;
-
-import cn.jpush.im.android.api.JMessageClient;
-import cn.jpush.im.android.api.event.LoginStateChangeEvent;
-import cn.jpush.im.android.api.model.UserInfo;
-import cn.jpush.im.api.BasicCallback;
 
 /**
  * Created by ASUS-NB on 2017/8/16.
  */
 
 public class BaseActivity extends AppCompatActivity {
-    protected int mWidth;
-    protected int mHeight;
-    protected float mDensity;
-    protected int mDensityDpi;
     private TextView mJmui_title_tv;
     private ImageButton mReturn_btn;
     private TextView mJmui_title_left;
     public Button mJmui_commit_btn;
-    protected int mAvatarSize;
-    protected float mRatio;
     private Dialog dialog;
     ConnectivityManager manager ;
     NetworkInfo networkInfo ;
@@ -54,12 +38,7 @@ public class BaseActivity extends AppCompatActivity {
         networkInfo = manager.getActiveNetworkInfo();
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
-        mDensity = dm.density;
-        mDensityDpi = dm.densityDpi;
-        mWidth = dm.widthPixels;
-        mHeight = dm.heightPixels;
-        mRatio = Math.min((float) mWidth / 720, (float) mHeight / 1280);
-        mAvatarSize = (int) (50 * mDensity);
+
     }
     protected boolean isNetWork(){
         if(networkInfo!=null&&networkInfo.isAvailable()){
@@ -67,6 +46,15 @@ public class BaseActivity extends AppCompatActivity {
         }else {
             return false;
         }
+    }
+    protected void initView(){
+
+    }
+    protected void initData(){
+
+    }
+    protected void initRxBus(){
+
     }
     //初始化各个activity的title
     public void initTitle(boolean returnBtn, boolean titleLeftDesc, String titleLeft, String title, boolean save, String desc) {

@@ -3,9 +3,9 @@ package com.jacob.www.a2dolist;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.jacob.www.a2dolist.util.SharePreferenceManager;
 
@@ -22,7 +22,7 @@ import cn.jpush.im.android.api.JMessageClient;
 public class BaseApp extends Application {
     private static Context mContext;
     public static long registerOrLogin = 1;
-
+    public static final String APPKEY = "c91b0418d8554d5bc9b32f74";
     /**
      * 维护activity的List
      */
@@ -34,6 +34,17 @@ public class BaseApp extends Application {
         SharePreferenceManager.init(this,"2DoList_config");
         mContext = this;
         registerActivityListener();
+    }
+    public static DaoSession getDaosession() {
+        DaoSession daoSession;
+        DaoMaster daoMaster;
+        DaoMaster.DevOpenHelper helper;
+        SQLiteDatabase db;
+        helper = new DaoMaster.DevOpenHelper(BaseApp.getAppContext(), "Example-DB", null);
+        db = helper.getWritableDatabase();
+        daoMaster = new DaoMaster(db);
+        daoSession = daoMaster.newSession();
+        return daoSession;
     }
     public static Context getAppContext(){
         return mContext;
@@ -47,7 +58,6 @@ public class BaseApp extends Application {
                      *  监听到 Activity创建事件 将该 Activity 加入list
                      */
                     pushActivity(activity);
-
                 }
 
                 @Override

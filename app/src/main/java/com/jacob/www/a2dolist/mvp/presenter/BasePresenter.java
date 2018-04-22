@@ -12,5 +12,4 @@ import com.jacob.www.a2dolist.mvp.view.BaseView;
 public interface BasePresenter {
 
     void injectView(@NonNull BaseView view);
-
 }

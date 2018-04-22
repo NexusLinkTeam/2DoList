@@ -26,7 +26,7 @@ public class PhotoChooseActivity extends BaseGalleryActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photos);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         setTitle("Photo");
         setTitleColor(R.color.white);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

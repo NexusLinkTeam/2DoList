@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+
+    android:clickable="true"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFE8EDF3"/>
+
+    <LinearLayout
+        android:id="@+id/group_ll"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center_vertical"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="14.67dp"
+                android:background="@drawable/group"/>
+
+            <TextView
+                android:gravity="center"
+                android:textSize="9sp"
+                android:layout_marginLeft="43dp"
+                android:id="@+id/group_verification_num"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:visibility="invisible"
+                android:background="@drawable/red_circle"
+                android:textColor="@android:color/white"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="11.67dp"
+            android:text="会议组"
+            android:textColor="#2C2C2C"
+            android:textSize="16sp"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#FFE8EDF3"/>
+</LinearLayout>

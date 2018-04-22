@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="To-Do" />
+            android:id="@+id/nav_todo"
+            android:icon="@drawable/nav_todo"
+            android:title="To-Do"
+            android:checked="true"/>
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="会议组" />
+            android:id="@+id/nav_conf"
+            android:icon="@drawable/nav_conf"
+            android:title="会议组"
+            app:actionLayout="@layout/menu_verify"/>
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/nav_set"
+            android:title="退出登录" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/nav_about"
             android:title="关于我们" />
     </group>
 

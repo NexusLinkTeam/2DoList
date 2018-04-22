@@ -54,7 +54,43 @@ public class SharePreferenceManager {
         }
         return null;
     }
+    private static final String TODO_TEXT = "todo_text";
+    public static void setTodoText(String path) {
+        if (null != sp) {
+            sp.edit().putString(TODO_TEXT, path).apply();
+        }
+    }
 
+    public static String getTodoText() {
+        if (null != sp) {
+            return sp.getString(TODO_TEXT, null);
+        }
+        return null;
+    }
+    private static final String TODO_TEXT_1 = "todo_text1";
+    public static void setTodoText1(String path) {
+        if (null != sp) {
+            sp.edit().putString(TODO_TEXT_1, path).apply();
+        }
+    }
 
+    public static String getTodoText1() {
+        if (null != sp) {
+            return sp.getString(TODO_TEXT_1, null);
+        }
+        return null;
+    }
+    private static final String GROUP_TASK = "group_task";
+    public static void setGroupTask(String task) {
+        if (null != sp) {
+            sp.edit().putString(GROUP_TASK, task).apply();
+        }
+    }
 
+    public static String getGroupTask() {
+        if (null != sp) {
+            return sp.getString(GROUP_TASK, null);
+        }
+        return null;
+    }
 }
