@@ -20,4 +20,22 @@
 ![添加事件.png](https://upload-images.jianshu.io/upload_images/2536154-b135b7e9d02471dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![好友.png](https://upload-images.jianshu.io/upload_images/2536154-15ac6e39d8bd2822.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+# 3 开发环境及技术支持
+## 3.1 开发环境及运行平台
+- Android Studio 2.3.3
+- JDK 1.8,java语言开发
+## 3.1.2 运行环境
+- Android平台系列手机
+- minSDK>=18
+## 3.2 技术支持
+1. 界面设计
+    * 遵从Google Material Design设计。
+2. 网络数据交互
+    * OkHttp3：网络请求的优秀开源框架
+    * Retrofit2+RxJava：简化网络请求API与主子线程调度
+3. 本地数据存储
+    * SharedPreference：Android 自带简单本地存储API。
+    * GreenDao：轻量高效数据库。
+4. 代码解耦
+    * MVP设计模式：业务分为3个层次，M-Model，V-View，P-presnter，通过p进行中转达到解耦。
+    * Dagger2：依赖注入框架，减少模块之间的依赖
