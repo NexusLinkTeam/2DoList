@@ -15,7 +15,7 @@
 5. 会议组功能：用户可以通过创建一个会议组并将自己的好友添加到该会议组中，会议组创建成功后，会议组所有者可以向会议组中的成员发送任务，该任务也将会以任务清单的形式添加到会议组其他成员中。
 # 2.功能展示
 ## 添加事件&好友&会议组
-<img src="https://upload-images.jianshu.io/upload_images/2536154-730aa96c028a70c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="会议组" width="250px" ><img src="https://upload-images.jianshu.io/upload_images/2536154-b135b7e9d02471dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="添加事件" width="250px" ><img src="https://upload-images.jianshu.io/upload_images/2536154-15ac6e39d8bd2822.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="好友" width="250px" >
+<img src="https://upload-images.jianshu.io/upload_images/2536154-730aa96c028a70c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="会议组" width="250px" > <img src="https://upload-images.jianshu.io/upload_images/2536154-b135b7e9d02471dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="添加事件" width="250px" > <img src="https://upload-images.jianshu.io/upload_images/2536154-15ac6e39d8bd2822.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="好友" width="250px" >
 # 3 开发环境及技术支持
 ## 3.1 开发环境及运行平台
 - Android Studio 2.3.3
